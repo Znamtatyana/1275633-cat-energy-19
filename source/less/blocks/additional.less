@@ -25,3 +25,45 @@
   font-size: 14px;
   color: #444444;
 }
+
+.additional__price {
+  text-align: right;
+  min-width: 43px;
+  margin-left: 53px;
+}
+
+@media (min-width: @tablet-width) {
+  .additional__item-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .additional__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .additional__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .additional__item-wrapper {
+    width: 650px;
+  }
+
+  .additional__name {
+    width: 326px;
+  }
+
+  .additional__description {
+    width: 286px;
+  }
+
+  .additional__link.button {
+    width: 245px;
+  }
+}

@@ -6,12 +6,8 @@
 
 .site-list__item {
   padding: 24px 0;
-  border-bottom: 1px solid #e6e6e6;
-  text-align: center;
-}
-
-.site-list__item:first-child {
   border-top: 1px solid #e6e6e6;
+  text-align: center;
 }
 
 .site-list__link {
@@ -19,4 +15,10 @@
   text-transform: uppercase;
   text-decoration: none;
   color: #111111;
+}
+
+@media (min-width: @tablet-width) {
+  .site-list__item {
+    border: none;
+  }
 }

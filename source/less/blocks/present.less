@@ -16,3 +16,29 @@
   line-height: 20px;
   color: @white;
 }
+
+@media (min-width: @tablet-width) {
+  .present {
+    min-height: 200px;
+    padding-top: 75px;
+    padding-left: 423px;
+    text-align: left;
+    background: url("../img/icon-gift.svg") no-repeat 10% 30%,
+      url("../img/gift-photo-tablet@1x.jpg") no-repeat 0 0;
+    background-size: 55px 60px, auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .present {
+    width: 245px;
+    min-height: 99px;
+    padding-top: 190px;
+    padding-left: 0;
+    text-align: center;
+    background: url("../img/icon-gift.svg") no-repeat 50% 25%,
+      url("../img/gift-photo-mobile@1x.jpg") no-repeat 0 0;
+    background-color: @green;
+    background-size: 55px 60px, auto;
+  }
+}

@@ -1,10 +1,21 @@
+.products {
+  position: relative;
+}
+
 .products__link {
   text-decoration: none;
+}
+
+.products__link-title {
+  text-align: left;
+  width: 72px;
+  margin-left: 143px;
 }
 
 .products__list {
   font-family: "Arial", "Helvetica", sans-serif;
   font-size: 12px;
+  margin-left: 140px;
   color: #444444;
 }
 
@@ -14,4 +25,23 @@
 
 .products__value {
   text-align: right;
+}
+
+.products__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .products__link-title {
+    text-align: center;
+    width: 125px;
+    margin: 0 auto;
+  }
+
+  .products__list {
+    margin-left: 0;
+    width: 100%;
+  }
 }

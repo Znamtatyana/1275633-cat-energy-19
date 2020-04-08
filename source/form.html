@@ -3,29 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <div class="container">
+      <div class="page-header__wrapper container">
         <a class="page-header__logo" href="index.html">
           <img class="page-header__logo-image" src="../img/logo-mobile.svg" width="191" height="39" alt="Логотип Кэт энерджи">
         </a>
-        <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list site-list">
-              <li class="site-list__item">
-                <a class="site-list__link" href="index.html">Главная</a>
-              </li>
-              <li class="site-list__item">
-                <a class="site-list__link" href="catalog.html">Каталог продукции</a>
-              </li>
-              <li class="site-list__item">
-                <a class="site-list__link" href="#">Подбор программы</a>
-              </li>
-            </ul>
-          </div>
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">Подбор программы</a>
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
@@ -34,40 +34,42 @@
       <h1 class="form-page-main__title block-title">Подбор программы</h1>
       <p class="form-page-main__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
       <form class="form-page-main__filters filters" method="get" action="https://echo.htmlacademy.ru">
-        <fieldset class="filters__group about-cat">
-          <legend class="visually-hidden">О коте</legend>
-          <ul class="filters__list about-cat__list">
-            <li class="about-cat__item">
-              <label for="cat-name">Имя:<sup>*</sup></label>
-              <input class="filters__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик">
-            </li>
-            <li class="about-cat__item">
-              <label for="weight">Вес (кг):<sup>*</sup></label>
-              <input class="filters__input" type="number" name="weight" id="weight" placeholder="7">
-            </li>
-            <li class="about-cat__item">
-              <label for="age">Возраст (лет):</label>
-              <input class="filters__input" type="number" name="age" id="age" placeholder="7">
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="filters__group program">
-          <legend class="visually-hidden">Программа</legend>
-          <ul class="filters__list program__list">
-            <li class="program__item">
-              <input class="" type="radio" name="program" id="program-slim" value="losing-weight" checked>
-              <label for="program-slim">Похудение</label>
-            </li>
-            <li class="program__item">
-              <input class="" type="radio" name="program" id="program-pro" value="mass-gain">
-              <label for="program-pro">Набор массы</label>
-            </li>
-            <li class="program__item">
-              <input class="" type="radio" name="program" id="program-advice" value="ladvice">
-              <label for="program-advice">Не знаю (нужен ваш совет)</label>
-            </li>
-          </ul>
-        </fieldset>
+        <div class="filters__wapper">
+          <fieldset class="filters__group about-cat">
+            <legend class="visually-hidden">О коте</legend>
+            <ul class="filters__list about-cat__list">
+              <li class="about-cat__item">
+                <label for="cat-name">Имя:<sup>*</sup></label>
+                <input class="filters__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик">
+              </li>
+              <li class="about-cat__item">
+                <label for="weight">Вес (кг):<sup>*</sup></label>
+                <input class="filters__input" type="number" name="weight" id="weight" placeholder="7">
+              </li>
+              <li class="about-cat__item">
+                <label for="age">Возраст (лет):</label>
+                <input class="filters__input" type="number" name="age" id="age" placeholder="7">
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filters__group program">
+            <legend class="visually-hidden">Программа</legend>
+            <ul class="filters__list program__list">
+              <li class="program__item">
+                <input class="" type="radio" name="program" id="program-slim" value="losing-weight" checked>
+                <label for="program-slim">Похудение</label>
+              </li>
+              <li class="program__item">
+                <input class="" type="radio" name="program" id="program-pro" value="mass-gain">
+                <label for="program-pro">Набор массы</label>
+              </li>
+              <li class="program__item">
+                <input class="" type="radio" name="program" id="program-advice" value="ladvice">
+                <label for="program-advice">Не знаю (нужен ваш совет)</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
         <fieldset class="filters__group user-contacts">
           <legend class="filters__legend">Контактные данные (владельца кота)</legend>
           <ul class="filters__list user-contacts__list">
@@ -82,8 +84,8 @@
           </ul>
         </fieldset>
         <div class="filters__group comment">
-          <label class="filters__legend" for="text-comment">Комментарий</label>
-          <textarea class="filters__textarea filters__input" id="text-comment" name="comment" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <label class="filters__legend comment__legend" for="text-comment">Комментарий</label>
+          <textarea class="filters__textarea filters__input comment__textarea" id="text-comment" name="comment" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
         </div>
         <fieldset class="filters__group additionally">
           <legend class="filters__legend">Дополнительно</legend>
@@ -106,20 +108,22 @@
             </li>
           </ul>
         </fieldset>
-        <button class="filters__button button" type="submit">Отправить заявку</button>
-        <p class="filters__text"><sup>*</sup> &#8212; Обязательные поля</p>
+        <div class="filters__button-wrapper">
+          <button class="filters__button button" type="submit">Отправить заявку</button>
+          <p class="filters__text"><sup>*</sup> &#8212; Обязательные поля</p>
+        </div>
       </form>
     </main>
 
     <footer class="page-footer">
       <div class="page-footer__contacts contacts">
-        <div class="container">
-          <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
+        <div class="contacts__block container">
+          <b class="contacts__title paragraph-font">Приглашаем к&nbsp;сотрудничеству дилеров!</b>
           <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002965!2d30.320858715898996!3d59.9387191690544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1584259406496!5m2!1sru!2sru" width="" height="" allowfullscreen></iframe>
+        <iframe class="page-footer__img" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002965!2d30.320858715898996!3d59.9387191690544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1584259406496!5m2!1sru!2sru" width="100%" height="100%" allowfullscreen></iframe>
       </div>
-      <div class="container">
+      <div class="page-footer__bottom container">
         <a class="page-footer__logo" href="index.html">
           <img class="page-footer__logo-image" src="../img/logo-footer.svg" width="128" height="24" alt="Логотип Кэт энерджи">
         </a>
