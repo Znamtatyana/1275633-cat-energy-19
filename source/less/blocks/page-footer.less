@@ -1,3 +1,29 @@
 .page-footer {
   background-color: @lightgrey;
 }
+
+.page-footer__contacts {
+  background-color: #f2f2f2;
+}
+
+.page-footer__img {
+  min-height: 365px;
+  border: none;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__contacts {
+    background-color: @white;
+  }
+
+  .page-footer__img {
+    min-height: 400px;
+  }
+
+  .page-footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 150px;
+  }
+}

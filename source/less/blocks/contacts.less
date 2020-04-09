@@ -1,17 +1,40 @@
 .contacts {
+  position: relative;
   background-color: @white;
 }
 
+.contacts__block {
+  display: flex;
+  justify-content: space-between;
+}
+
 .contacts__title {
+  width: 124px;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
+  text-align: left;
 }
 
 .contacts__text {
+  width: 135px;
+  margin: 0;
   font-family: "Arial", "Helvetica", sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: #444444;
+  text-align: left;
+}
+
+@media (min-width: @desktop-width) {
+  .contacts__block {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    padding: 64px;
+    width: 440px;
+    background-color: @white;
+    z-index: 1;
+  }
 }

@@ -7,7 +7,6 @@
 
 .intro__wrapper {
   min-height: 480px;
-  padding-top: 28px;
 }
 
 .intro__title {
@@ -23,7 +22,40 @@
   text-transform: uppercase;
 }
 
-.intro__link.button {
+.intro__link {
   font-size: 14px;
   margin-top: 100%;
+}
+
+@media (min-width: @tablet-width) {
+  .intro {
+    color: #111111;
+    text-align: left;
+    padding-left: 90px;
+    background: url("../img/index-can-mobile@1x.png") no-repeat 50% 70%;
+    background-size: 70%;
+  }
+
+  .intro__wrapper {
+    width: 417px;
+    margin-left: 0;
+    min-height: 285px;
+  }
+
+  .intro__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .intro__link {
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .intro {
+    padding-left: 80px;
+    background: url("../img/index-can-mobile@1x.png") no-repeat 60% 50%;
+    background-size: 30%;
+  }
 }

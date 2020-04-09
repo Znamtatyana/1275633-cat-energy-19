@@ -1,3 +1,24 @@
 .page-header {
   margin: 0;
 }
+
+.page-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  min-height: 65px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__wrapper {
+    min-height: 82px;
+    border: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__wrapper {
+    min-height: 108px;
+  }
+}

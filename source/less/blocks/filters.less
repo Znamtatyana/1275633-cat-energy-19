@@ -23,6 +23,7 @@
 }
 
 .filters__input {
+  margin-left: 14px;
   font: inherit;
   text-transform: uppercase;
   padding: 9px 14px;
@@ -46,4 +47,25 @@
   text-transform: none;
   text-align: center;
   color: #444444;
+}
+
+@media (min-width: @tablet-width) {
+  .filters__button-wrapper {
+    display: flex;
+  }
+
+  .filters__button.button {
+    width: 283px;
+  }
+
+  .filters__text {
+    width: 283px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filters__wapper {
+    display: flex;
+    justify-content: space-between;
+  }
 }

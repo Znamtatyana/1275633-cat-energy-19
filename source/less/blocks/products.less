@@ -1,5 +1,13 @@
+.products__wrapper {
+  display: flex;
+}
+
 .products__link {
+  display: block;
+  margin: 20px 0;
   text-decoration: none;
+  text-align: left;
+  width: 72px;
 }
 
 .products__list {
@@ -14,4 +22,21 @@
 
 .products__value {
   text-align: right;
+}
+
+@media (min-width: @tablet-width) {
+  .products__wrapper {
+    display: block;
+  }
+
+  .products__link {
+    text-align: center;
+    width: 125px;
+    margin: 0 auto;
+  }
+
+  .products__list {
+    margin-left: 0;
+    width: 100%;
+  }
 }
