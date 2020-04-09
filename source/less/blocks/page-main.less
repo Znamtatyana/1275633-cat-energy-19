@@ -13,7 +13,17 @@
   .page-main__intro {
     display: flex;
     align-items: center;
-    margin-top: -108px;
-    min-height: 678px;
+    min-height: 570px;
+  }
+
+  .page-main__intro::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "";
+    width: 650px;
+    height: 696px;
+    background: url("../img/index-background-desktop@1x.jpg") no-repeat 100% 0;
+    z-index: -1;
   }
 }

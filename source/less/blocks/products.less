@@ -1,21 +1,18 @@
-.products {
-  position: relative;
+.products__wrapper {
+  display: flex;
 }
 
 .products__link {
+  display: block;
+  margin: 20px 0;
   text-decoration: none;
-}
-
-.products__link-title {
   text-align: left;
   width: 72px;
-  margin-left: 143px;
 }
 
 .products__list {
   font-family: "Arial", "Helvetica", sans-serif;
   font-size: 12px;
-  margin-left: 140px;
   color: #444444;
 }
 
@@ -27,14 +24,12 @@
   text-align: right;
 }
 
-.products__img {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 @media (min-width: @tablet-width) {
-  .products__link-title {
+  .products__wrapper {
+    display: block;
+  }
+
+  .products__link {
     text-align: center;
     width: 125px;
     margin: 0 auto;
