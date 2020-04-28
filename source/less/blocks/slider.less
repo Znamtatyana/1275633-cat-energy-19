@@ -1,3 +1,61 @@
 .slider {
-  margin: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: url("../img/before-mobile@1x.png") no-repeat 0 0;
+}
+
+.slider__control {
+  display: flex;
+  align-items: center;
+}
+
+.slider__toggle {
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 0;
+  border: none;
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+.slider__line {
+  position: relative;
+  width: 82px;
+  height: 12px;
+  margin: 0 18px;
+  background-color: @white;
+  border: 1px solid #cdcdcd;
+  border-radius: 5px;
+
+  &::before {
+    position: absolute;
+    top: 3px;
+    left: 5px;
+
+    content: "";
+    width: 35px;
+    height: 6px;
+    background-color: #68b738;
+    border-radius: 3px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .slider__toggle {
+    font-size: 20px;
+    border-bottom: 1px dotted #bebebe;
+  }
+
+  .slider__line {
+    width: 427px;
+    height: 6px;
+    margin: 0 25px;
+    background-color: #dcdcdc;
+    border: none;
+
+    &::before {
+      display: none;
+    }
+  }
 }

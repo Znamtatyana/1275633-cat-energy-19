@@ -4,7 +4,6 @@
   padding: 0;
 }
 
-
 .advantages__item {
   position: relative;
   margin-bottom: 20px;
@@ -46,6 +45,10 @@
   background: url("../img/advantage-clock@1x.png") no-repeat 0 0;
 }
 
+.advantages__title {
+  margin-bottom: 28px;
+}
+
 .advantages__description {
   font-family: "Arial", "Helvetica", sans-serif;
   font-size: 14px;
@@ -54,16 +57,67 @@
   color: #444444;
 }
 
+.advantages__number {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .advantages__list {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 45px;
   }
 
   .advantages__item {
     width: 246px;
+    min-height: 116px;
     padding-left: 0;
-    padding-top: 117px;
+    padding-top: 112px;
+    margin-bottom: 88px;
+    margin-right: 80px;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      top: 16px;
+      left: 16px;
+    }
+  }
+
+  .advantages__description {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 0;
+  }
+
+  .advantages__number {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 119px;
+    font-size: 281px;
+    line-height: 200px;
+    margin: 0;
+    color: #f2f2f2;
+    z-index: -1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__list {
+    display: flex;
+    flex-wrap: now-wrap;
+    justify-content: space-between;
+    width: 1220px;
+    padding-top: 45px;
+  }
+
+  .advantages__item {
+    margin-right: 0;
+    margin-bottom: 68px;
   }
 }
