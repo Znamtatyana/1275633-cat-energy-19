@@ -30,6 +30,7 @@
 @media (min-width: @tablet-width) {
   .site-list__item {
     border: none;
+    padding: 0;
   }
 
   .site-list__link {
@@ -57,8 +58,13 @@
   .site-list__link {
     font-size: 20px;
 
-    &--main {
+    &--home {
       color: @white;
     }
+  }
+
+  .site-list__link--home::after {
+    top: 33px;
+    background-color: white;
   }
 }

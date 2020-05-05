@@ -29,23 +29,25 @@
 
 .example__item {
   position: relative;
+  padding-top: 12px;
+  padding-bottom: 15px;
+  width: 122px;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
 }
 
 .example__value {
   display: block;
   min-width: 90px;
-  padding: 12px 16px 15px;
   font-size: 24px;
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
-  border: 1px solid #cdcdcd;
-  border-radius: 3px;
 }
 
 .example__label {
   position: absolute;
-  top: 47px;
+  top: 46px;
   left: 18px;
   display: block;
   padding: 0 16px;
@@ -73,9 +75,17 @@
 }
 
 @media (min-width: @tablet-width) {
+  .example {
+    background: linear-gradient(to bottom, @white 55%, #f2f2f2 55%, #f2f2f2 100%);
+  }
+
   .example__wrapper {
     display: flex;
     justify-content: space-between;
+  }
+
+  .example__title {
+    padding-top: 0;
   }
 
   .example__block {
@@ -93,16 +103,22 @@
     min-width: 365px;
   }
 
+  .example__item {
+    padding-top: 17px;
+    padding-bottom: 21px;
+    width: 160px;
+  }
+
   .example__value {
     font-size: 30px;
-    padding: 21px 30px 23px;
   }
 
   .example__label {
     font-size: 14px;
-    width: auto;
+    min-width: 97px;
     padding: 8px;
     top: 63px;
+    background-color: @white;
   }
 
   .example__text {
@@ -115,7 +131,7 @@
   }
 
   .example__slider {
-    min-height: 648px;
+    min-height: 637px;
     padding-bottom: 39px;
   }
 }
@@ -124,13 +140,43 @@
   .example {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 32px;
+    background: linear-gradient(to bottom, @white 20%, #f2f2f2 20%, #f2f2f2 100%);
   }
 
   .example__block {
     width: 430px;
+    padding-top: 15px;
+    padding-left: 55px;
+  }
+
+  .example__description {
+    margin-top: 145px;
+    margin-bottom: 68px;
   }
 
   .example__slider {
     width: 615px;
+    min-height: 538px;
+  }
+
+  .example__wrapper {
+    flex-direction: column;
+  }
+
+  .example__list {
+    margin-bottom: 50px;
+    width: 366px;
+  }
+
+  .example__label {
+    top: 56px;
+    background-color: #f2f2f2;
+  }
+
+  .example__text {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 326px;
   }
 }

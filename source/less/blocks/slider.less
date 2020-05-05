@@ -2,7 +2,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  background: url("../img/before-mobile@1x.png") no-repeat 0 0;
+  background: url("../img/before-mobile@1x.png") no-repeat 50% 0;
 }
 
 .slider__control {
@@ -15,7 +15,7 @@
   text-transform: uppercase;
   padding: 0;
   border: none;
-  background-color: #f2f2f2;
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -42,6 +42,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .slider {
+    background: url("../img/before-tablet@1x.png") no-repeat 65% 45%;
+  }
+
   .slider__toggle {
     font-size: 20px;
     border-bottom: 1px dotted #bebebe;
@@ -55,7 +59,19 @@
     border: none;
 
     &::before {
-      display: none;
+      top: -12px;
+      left: 80px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      border: 12px solid @white;
+      box-shadow: 0 0 0 1px #cdcdcd;
     }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider {
+    background: url("../img/before-desktop@1x.png") no-repeat 65% 0;
   }
 }

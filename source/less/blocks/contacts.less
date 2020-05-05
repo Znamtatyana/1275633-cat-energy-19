@@ -1,5 +1,9 @@
 .contacts {
   position: relative;
+  background-color: #f2f2f2;
+}
+
+.contacts--home {
   background-color: @white;
 }
 
@@ -30,6 +34,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .contacts--home {
+    background-color: @white;
+  }
+
   .contacts__block {
     max-width: 625px;
     padding: 64px 40px 62px;
@@ -55,11 +63,22 @@
 @media (min-width: @desktop-width) {
   .contacts__block {
     position: absolute;
-    top: 95px;
-    left: 110px;
-    padding: 64px;
-    width: 440px;
+    top: 97px;
+    left: 111px;
+    padding: 0;
     background-color: @white;
     z-index: 1;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 570px;
+    height: 201px;
+  }
+
+  .contacts__text {
+    align-items: flex-start;
+    text-align: left;
+    min-height: 75px;
   }
 }

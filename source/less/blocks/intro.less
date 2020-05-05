@@ -36,8 +36,6 @@
 @media (min-width: @tablet-width) {
   .intro {
     color: #111111;
-    padding-top: 17px;
-    padding-left: 94px;
     text-align: left;
     background: url("../img/index-can-tablet@1x.jpg") no-repeat 50% 110%;
     background-size: 90.5%;
@@ -47,8 +45,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
     margin-left: 0;
+    margin-top: 48px;
+    padding-left: 88px;
     min-height: 281px;
   }
 
@@ -64,7 +63,7 @@
 
   .intro__link--main.button {
     font-size: 20px;
-    width: 34.5%;
+    width: 40%;
     margin-top: 0;
     padding: 15px 0;
   }
@@ -73,16 +72,22 @@
 @media (min-width: @desktop-width) {
   .intro {
     padding-top: 0;
-    padding-left: 80px;
-    background: url("../img/index-can-desktop@1x.png") no-repeat 65.5% 46%;
-    background-size: 42%;
+    background: url("../img/index-can-desktop@1x.png") no-repeat 63.5% 48%;
+    background-size: 38%;
   }
 
   .intro__wrapper {
+    margin: 0;
     padding-top: 0;
+    padding-left: 82px;
+    min-height: 286px;
   }
 
   .intro__link--main.button {
     width: 245px;
+  }
+
+  .intro__title {
+    width: 30%;
   }
 }
