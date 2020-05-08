@@ -2,12 +2,14 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  background: url("../img/before-mobile@1x.png") no-repeat 50% 0;
+  background: url("../img/before-mobile@1x.png") no-repeat 50% 30%;
 }
 
 .slider__control {
   display: flex;
   align-items: center;
+  margin-bottom: 2px;
+  padding-left: 5px;
 }
 
 .slider__toggle {
@@ -43,7 +45,12 @@
 
 @media (min-width: @tablet-width) {
   .slider {
-    background: url("../img/before-tablet@1x.png") no-repeat 65% 45%;
+    background: url("../img/before-tablet@1x.png") no-repeat 58% 52%;
+  }
+
+  .slider__control {
+    margin-bottom: 0;
+    padding-left: 2px;
   }
 
   .slider__toggle {
@@ -60,7 +67,7 @@
 
     &::before {
       top: -12px;
-      left: 80px;
+      left: 198px;
       width: 8px;
       height: 8px;
       border-radius: 50%;
@@ -72,6 +79,19 @@
 
 @media (min-width: @desktop-width) {
   .slider {
-    background: url("../img/before-desktop@1x.png") no-repeat 65% 0;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    padding-top: 68px;
+    background: url("../img/before-desktop@1x.png") no-repeat 44% 30%;
+  }
+
+  .slider__control {
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .slider__line {
+    margin: 0 21px;
   }
 }
