@@ -1,9 +1,35 @@
-.form-page-main {
-  margin: 0;
+.form-page-main__title {
+  margin-top: 15px;
+  margin-bottom: 26px;
 }
 
 .form-page-main__text {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .form-page-main__title {
+    margin-top: 75px;
+    margin-bottom: 55px;
+  }
+
+  .form-page-main__text {
+    width: 630px;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .form-page-main__title {
+    margin-top: 80px;
+  }
+
+  .form-page-main__text {
+    margin: 0;
+  }
 }

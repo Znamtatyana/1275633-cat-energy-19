@@ -1,4 +1,25 @@
-.about-cat__item {
-  width: 571px;
+.about-cat {
   margin-bottom: 14px;
+}
+
+.about-cat__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+@media (min-width: @tablet-width) {
+  .about-cat {
+    margin-bottom: 51px;
+  }
+
+  .about-cat__item {
+    margin-bottom: 21px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-cat {
+    margin-bottom: 0;
+  }
 }
