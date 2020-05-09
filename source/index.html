@@ -11,7 +11,11 @@
     <header class="page-header">
       <div class="page-header__wrapper">
         <a class="page-header__logo container" href="#">
-          <img class="page-header__logo-image" src="../img/logo-mobile.svg" width="191" height="39" alt="Логотип Кэт энерджи">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="../img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="../img/logo-desktop.svg">
+            <img class="page-header__logo-image" src="../img/logo-mobile.svg" width="191" height="39" alt="Логотип Кэт энерджи">
+          </picture>
         </a>
         <nav class="main-nav main-nav--opened main-nav--nojs">
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -101,7 +105,12 @@
               </p>
             </div>
           </div>
-          <div class="example__slider slider container">
+          <div class="example__slider slider">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png, img/before-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png, img/before-tablet@2x.png 2x">
+              <img class="slider__image" src="img/before-mobile@1x.png" width="280" height="210" srcset="img/before-mobile@2x.png 2x" alt="Толстый кот">
+            </picture>
             <div class="slider__control">
               <button class="slider__toggle" type="button">Было</button>
               <div class="slider__line"></div>

@@ -7,10 +7,17 @@
   margin-bottom: 35px;
   padding-bottom: 25px;
   text-align: center;
-  background: url("../img/icon-gift.svg") no-repeat 50% 28%,
-    url("../img/gift-photo-mobile@1x.jpg") no-repeat center 0;
+  background-image: url("../img/icon-gift.svg"),
+    url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 28%, center 0;
   background-color: @green;
-  background-size: 55px 60px, auto;
+  background-size: 55px 60px, 100%;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/icon-gift.svg"),
+      url("../img/gift-photo-mobile@2x.jpg");
+  }
 }
 
 .present__text {
@@ -31,10 +38,16 @@
     margin-bottom: 76px;
     padding-bottom: 0;
     text-align: left;
-    background: url("../img/icon-gift.svg") no-repeat 14% 45%,
-      url("../img/gift-photo-tablet@1x.jpg") no-repeat center 0;
+    background-image: url("../img/icon-gift.svg"),
+      url("../img/gift-photo-tablet@1x.jpg");
+    background-position: 14% 45%, center 0;
     background-color: @green;
-    background-size: 55px 60px, auto;
+    background-size: 55px 60px, 100%;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/icon-gift.svg"),
+        url("../img/gift-photo-tablet@2x.jpg");
+    }
   }
 
   .present__text {
@@ -52,10 +65,16 @@
     padding-top: 165px;
     padding-left: 0;
     text-align: center;
-    background: url("../img/icon-gift.svg") no-repeat 50% 28%,
-      url("../img/gift-photo-mobile@1x.jpg") no-repeat 0 0;
+    background-image: url("../img/icon-gift.svg"),
+      url("../img/gift-photo-desktop@1x.jpg");
     background-color: @green;
-    background-size: 55px 60px, auto;
+    background-size: 55px 60px, 100%;
+    background-position: 50% 28%, 0 0;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/icon-gift.svg"),
+        url("../img/gift-photo-desktop@2x.jpg");
+    }
   }
 
   .present__text {

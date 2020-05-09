@@ -1,8 +1,13 @@
 .slider {
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  background: url("../img/before-mobile@1x.png") no-repeat 50% 30%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.slider__image {
+  margin-bottom: 33px;
+  width: 100%;
 }
 
 .slider__control {
@@ -44,8 +49,10 @@
 }
 
 @media (min-width: @tablet-width) {
-  .slider {
-    background: url("../img/before-tablet@1x.png") no-repeat 58% 52%;
+  .slider__image {
+    margin-bottom: 16px;
+    width: 98%;
+    margin-left: 13px;
   }
 
   .slider__control {
@@ -80,10 +87,14 @@
 @media (min-width: @desktop-width) {
   .slider {
     justify-content: flex-end;
+    align-items: flex-end;
     margin: 0;
     padding: 0;
-    padding-top: 68px;
-    background: url("../img/before-desktop@1x.png") no-repeat 44% 30%;
+  }
+
+  .slider__image {
+    margin-bottom: 36px;
+    margin-left: 51px;
   }
 
   .slider__control {
