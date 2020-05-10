@@ -34,6 +34,7 @@
   background-color: @white;
   border: 1px solid #cdcdcd;
   border-radius: 5px;
+  cursor: pointer;
 
   &::before {
     position: absolute;
@@ -61,8 +62,35 @@
   }
 
   .slider__toggle {
+    position: relative;
     font-size: 20px;
-    border-bottom: 1px dotted #bebebe;
+
+    &::before {
+      position: absolute;
+      top: 25px;
+      left: 0;
+      content: "";
+      width: 100%;
+      height: 0;
+      border-bottom: 1px dotted #bebebe;
+    }
+
+    &:hover {
+      outline: none;
+
+      &::before {
+        border-bottom: 1px solid #bebebe;
+      }
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+
+      &::before {
+        border: none;
+      }
+    }
   }
 
   .slider__line {
@@ -79,7 +107,19 @@
       height: 8px;
       border-radius: 50%;
       border: 12px solid @white;
-      box-shadow: 0 0 0 1px #cdcdcd;
+      box-shadow: 0 0 0 1px #cdcdcd, 0 3px 10px 0 #cdcdcd;
+    }
+
+    &:hover {
+      &::before {
+        box-shadow: 0 0 0 1px #cdcdcd, 0 3px 5px 2px #cdcdcd;
+      }
+    }
+
+    &:active {
+      &::before {
+        box-shadow: 0 0 0 2px #68b738, 0 5px 5px 2px #cdcdcd;
+      }
     }
   }
 }
