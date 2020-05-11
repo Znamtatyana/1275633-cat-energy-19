@@ -36,6 +36,15 @@
   background: url("../img/icon-tick.svg") no-repeat 0 0;
 }
 
+.additionally__input:hover + .additionally__label::before {
+  border: 1px solid #bababa;
+}
+
+.additionally__label:active {
+  opacity: 0.3;
+}
+
+
 @media (min-width: @tablet-width) {
   .additionally__list {
     display: flex;

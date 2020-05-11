@@ -42,6 +42,14 @@
   background-color: #68b738;
 }
 
+.program__input:hover + .program__label::before {
+  border: 1px solid #bababa;
+}
+
+.program__label:active {
+  opacity: 0.3;
+}
+
 @media (min-width: @tablet-width) {
   .program {
     margin-bottom: 84px;
@@ -66,8 +74,8 @@
   }
 
   .program__input:checked + .program__label::after {
-    top: 3px;
-    left: 39px;
+    top: 2px;
+    left: 40px;
 
     width: 18px;
     height: 18px;
