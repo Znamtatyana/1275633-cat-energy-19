@@ -20,6 +20,30 @@
   color: #444444;
 }
 
+.products {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    bottom: -25px;
+    left: -7%;
+    content: "";
+    width: 100vw;
+    height: 1px;
+    background-color:#ededed;
+  }
+
+  &:first-of-type::after {
+    position: absolute;
+    top: -2px;
+    left: -7%;
+    content: "";
+    width: 100vw;
+    height: 1px;
+    background-color: #ededed;
+  }
+}
+
 .products__field {
   text-align: left;
   padding: 0;
@@ -31,8 +55,9 @@
 }
 
 @media (min-width: @tablet-width) {
-  .products {
-    position: relative;
+  .products::before,
+  .products::after {
+    display: none;
   }
 
   .products__wrapper {
