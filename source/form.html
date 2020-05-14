@@ -23,7 +23,7 @@
             <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Кэт энерджи">
           </picture>
         </a>
-        <nav class="main-nav main-nav--opened main-nav--nojs">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__list site-list">
@@ -52,11 +52,11 @@
             <ul class="filters__list about-cat__list">
               <li class="about-cat__item">
                 <label for="cat-name">Имя:<sup>*</sup></label>
-                <input class="filters__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик">
+                <input class="filters__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик" required>
               </li>
               <li class="about-cat__item">
                 <label for="weight">Вес (кг):<sup>*</sup></label>
-                <input class="filters__input" type="text" name="weight" id="weight" placeholder="7">
+                <input class="filters__input" type="text" name="weight" id="weight" placeholder="7" required>
               </li>
               <li class="about-cat__item">
                 <label for="age">Возраст (лет):</label>
@@ -87,14 +87,14 @@
           <ul class="filters__list user-contacts__list">
             <li class="user-contacts__item">
               <label for="email">E-mail:<sup>*</sup></label>
-              <input class="filters__input user-contacts__input" type="email" name="email" id="email" placeholder="kuklachev@gmail.com">
+              <input class="filters__input user-contacts__input" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
               <svg class="user-contacts__icon user-contacts__icon--mail" width="17" height="13">
                 <use xlink:href="#icon-mail"></use>
               </svg>
             </li>
             <li class="user-contacts__item">
               <label for="phone">Телефон:<sup>*</sup></label>
-              <input class="filters__input user-contacts__input" type="tel" name="phone" id="phone" pattern="8 [(][0-9]{3}[)] [0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="8 (960) 900-60-90">
+              <input class="filters__input user-contacts__input" type="tel" name="phone" id="phone" pattern="8 [(][0-9]{3}[)] [0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="8 (960) 900-60-90" required>
               <svg class="user-contacts__icon user-contacts__icon--phone" width="20" height="20">
                 <use xlink:href="#icon-phone"></use>
               </svg>
@@ -186,5 +186,7 @@
         </div>
       </div>
     </footer>
+    <script src="js/script.js"></script>
+    <script src="js/picturefill.min.js"></script>
   </body>
 </html>
