@@ -1,7 +1,6 @@
 .intro {
   color: @white;
   text-align: center;
-  background: linear-gradient(to top, @white 36.5%, #63a73a 36.5%, #63a73a 100%);
   background-image: url("../img/index-can-mobile@1x.png"),
     url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -10,16 +9,28 @@
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/index-can-mobile@2x.png"),
       url("../img/index-background-mobile@2x.jpg");
-    background-size: 87.5%, 100%;
+    background-size: 281px, 320px;
   }
 }
 
 .intro__wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   min-height: 452px;
   padding-top: 28px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: -20px;
+    content: "";
+    width: 100vw;
+    height: 305px;
+    background: #63a73a;
+    z-index: -10;
+  }
 }
 
 .intro__title {
@@ -47,7 +58,7 @@
     text-align: left;
     background-image: url("../img/index-can-tablet@1x.jpg");
     background-position: 50% 110%;
-    background-size: 90.5%;
+    background-size: 710px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/index-can-tablet@2x.jpg");
@@ -58,10 +69,15 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-width: 558px;
     margin-left: 0;
     margin-top: 48px;
-    padding-left: 88px;
+    padding-left: 119px;
     min-height: 281px;
+
+    &::before {
+      display: none;
+    }
   }
 
   .intro__title {
@@ -76,7 +92,7 @@
 
   .intro__link--main.button {
     font-size: 20px;
-    width: 40%;
+    width: 44%;
     margin-top: 0;
     padding: 15px 0;
   }
@@ -86,8 +102,8 @@
   .intro {
     padding-top: 0;
     background-image: url("../img/index-can-desktop@1x.png");
-    background-position: 65.8% 49%;
-    background-size: 42.9%;
+    background-position: 63% 46%;
+    background-size: 552px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/index-can-desktop@2x.png");
@@ -97,7 +113,7 @@
   .intro__wrapper {
     margin: 0;
     padding-top: 0;
-    padding-left: 82px;
+    padding-left: 190px;
     min-height: 286px;
   }
 
