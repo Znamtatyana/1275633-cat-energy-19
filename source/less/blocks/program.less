@@ -3,15 +3,31 @@
 }
 
 .program__list {
-  padding-top: 20px;
-  border-top: 1px solid #ededed;
-  border-bottom: 1px solid #ededed;
+  padding-top: 21px;
+
+  &::before,
+  &::after {
+    position: absolute;
+    left: -7%;
+    content: "";
+    width: 100vw;
+    height: 1px;
+    background-color: #ededed;
+  }
+
+  &::before {
+    top: -6px;
+  }
+
+  &::after {
+    bottom: -2px;
+  }
 }
 
 .program__item {
   position: relative;
   padding-left: 46px;
-  margin-bottom: 24px;
+  margin-bottom: 25px;
 }
 
 .program__input {
@@ -58,6 +74,11 @@
   .program__list {
     padding-top: 33px;
     border: 1px solid #ededed;
+
+    &::before,
+    &::after {
+      display: none;
+    }
   }
 
   .program__item {
@@ -85,5 +106,6 @@
 @media (min-width: @desktop-width) {
   .program {
     margin-bottom: 0;
+    min-height: 196px;
   }
 }

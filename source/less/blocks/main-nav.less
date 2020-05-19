@@ -1,5 +1,4 @@
 .main-nav {
-  position: relative;
   width: 100%;
   margin: 0;
 }
@@ -15,17 +14,14 @@
   cursor: pointer;
   border: none;
   background-color: @white;
-}
-
-.main-nav--closed {
-  display: none;
+  outline: none;
 }
 
 .main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
-  top: 23px;
-  right: 0;
+  top: 22px;
+  left: 0;
   width: 24px;
   height: 2px;
   background-color: #222222;
@@ -37,10 +33,10 @@
   &::after {
     content: "";
     position: absolute;
-    top: -20px;
-    left: 2px;
-    width: 20px;
-    height: 3px;
+    top: 29px;
+    left: 0;
+    width: 23px;
+    height: 2px;
     background-color: #222222;
   }
 
@@ -54,8 +50,18 @@
   }
 }
 
-.main-nav--nojs .main-nav__toggle {
-  display: none;
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__list {
+    display: block;
+  }
 }
 
 @media (min-width: @tablet-width) {

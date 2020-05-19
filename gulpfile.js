@@ -14,6 +14,8 @@ var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
+var htmlmin = require("gulp-htmlmin");
+var uglify = require("gulp-uglify");
 var del = require("del");
 
 
@@ -29,24 +31,30 @@ gulp.task("css", function () {
     .pipe(gulp.dest("build/css"));
 });
 
+gulp.task("js", function() {
+  return gulp.src("source/js/*.js")
+  .pipe(uglify())
+  .pipe(gulp.dest("build/js"))
+});
+
 gulp.task("images", function () {
-  return gulp.src("sourse/img/**/*.{png,jpg,svg}")
+  return gulp.src("source/img/**/*.{png,jpg,svg}")
   .pipe(imagemin([
     imagemin.optipng({optimizationLevel: 3}),
-    imagemin.jpegtran({progressive: true}),
+    imagemin.mozjpeg({progressive: true}),
     imagemin.svgo()
   ]))
-  .pipe(gulp.dest("sourse/img"))
+  .pipe(gulp.dest("source/img"))
 });
 
 gulp.task("webp", function () {
   return gulp.src("source/img/**.*.{png,jpg}")
   .pipe(webp({quality: 90}))
-  .pipe(gulp.dest("sourse/img"));
+  .pipe(gulp.dest("source/img"));
 });
 
 gulp.task ("sprite", function () {
-  return gulp.src("sourse/img/icon-*.svg")
+  return gulp.src("source/img/icon-*.svg")
   .pipe(svgstore({
     inlineSvg: true
   }))
@@ -59,6 +67,7 @@ gulp.task("html", function() {
   .pipe(posthtml([
     include()
   ]))
+  .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest("build"));
 });
 
@@ -82,8 +91,10 @@ gulp.task("build", gulp.series(
   "clean",
   "copy",
   "css",
+  "js",
   "sprite",
-  "html"
+  "html",
+  "images"
 ));
 
 gulp.task("server", function () {
@@ -92,8 +103,9 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/less/**/*.less", gulp.series("css"));
-  gulp.watch("sourse/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
+  gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
+  gulp.watch("source/img/**.*.{png,jpg}", gulp.series("images", "refresh"));
 });
 
 gulp.task("refresh", function (done) {

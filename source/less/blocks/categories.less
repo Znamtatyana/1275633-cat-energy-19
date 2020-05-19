@@ -109,24 +109,26 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
-    margin-bottom: 28px;
-    padding-top: 74px;
-    padding-bottom: 62px;
+    margin-bottom: 30px;
+    padding-top: 71px;
+    padding-bottom: 54px;
     padding-right: 280px;
     padding-left: 53px;
-    min-height: 238px;
+    min-height: 246px;
 
     &::before {
-      top: 92px;
-      left: 447px;
+      top: 91px;
+      left: auto;
+      right: 61px;
 
       width: 200px;
       height: 200px;
     }
 
     &--slim::after {
-      top: 80px;
-      left: 476px;
+      top: 79px;
+      left: auto;
+      right: 91px;
 
       width: 141px;
       height: 194px;
@@ -134,7 +136,8 @@
 
     &--pro::after {
       top: 134px;
-      left: 411px;
+      left: auto;
+      right: 28px;
 
       width: 268px;
       height: 112px;
@@ -143,12 +146,15 @@
 
   .categories__title {
     font-size: 36px;
+    line-height: 36px;
     margin: 0;
   }
 
   .categories__description {
+    margin-bottom: 22px;
     font-size: 16px;
     line-height: 24px;
+    max-width: 100%;
     min-height: 96px;
     border: none;
   }
@@ -209,5 +215,7 @@
   .categories__description {
     margin-top: 70px;
     margin-bottom: 4px;
+    padding-bottom: 0;
+    min-width: 446px;
   }
 }

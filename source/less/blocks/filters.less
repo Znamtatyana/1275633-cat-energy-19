@@ -3,7 +3,7 @@
   text-transform: uppercase;
   color: #222222;
   margin-top: 37px;
-  padding-bottom: 19px;
+  padding-bottom: 18px;
 }
 
 .filters__group {
@@ -40,9 +40,14 @@
 
   &:focus,
   &:active {
-    border: 2px solid #444444;
+    border-color: #444444;
+    box-shadow: inset 0 0 0 1px #444444;
     outline: none;
   }
+}
+
+.filters__input::placeholder {
+  color: #444444;
 }
 
 .filters__textarea {
@@ -69,7 +74,7 @@
   .filters {
     font-size: 20px;
     margin-top: 65px;
-    padding-bottom: 51px;
+    padding-bottom: 52px;
   }
 
   .filters__legend {
