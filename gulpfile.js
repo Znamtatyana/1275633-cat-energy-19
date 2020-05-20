@@ -31,6 +31,15 @@ gulp.task("css", function () {
     .pipe(gulp.dest("build/css"));
 });
 
+gulp.task("copy_css", function () {
+  return gulp.src ("source/less/style.less")
+  .pipe(plumber())
+  .pipe(less())
+  .pipe(postcss([ autoprefixer() ]))
+  .pipe(gulp.dest("build/css"))
+  .pipe(server.stream());
+})
+
 gulp.task("js", function() {
   return gulp.src("source/js/*.js")
   .pipe(uglify())
@@ -91,6 +100,7 @@ gulp.task("build", gulp.series(
   "clean",
   "copy",
   "css",
+  "copy_css",
   "js",
   "sprite",
   "html",

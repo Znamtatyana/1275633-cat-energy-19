@@ -30,10 +30,6 @@
   margin-bottom: 25px;
 }
 
-.program__input {
-  display: none;
-}
-
 .program__input + .program__label::before {
   position: absolute;
   top: -6px;
@@ -58,7 +54,8 @@
   background-color: #68b738;
 }
 
-.program__input:hover + .program__label::before {
+.program__input:hover + .program__label::before,
+.program__input:focus + .program__label::before {
   border: 1px solid #bababa;
 }
 

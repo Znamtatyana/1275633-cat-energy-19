@@ -12,10 +12,6 @@
   padding-left: 46px;
 }
 
-.additionally__input {
-  display: none;
-}
-
 .additionally__input + .additionally__label::before {
   position: absolute;
   top: -6px;
@@ -36,7 +32,8 @@
   background: url("../img/icon-tick.svg") no-repeat 0 0;
 }
 
-.additionally__input:hover + .additionally__label::before {
+.additionally__input:hover + .additionally__label::before,
+.additionally__input:focus + .additionally__label::before {
   border: 1px solid #bababa;
 }
 

@@ -35,7 +35,7 @@
   }
 
   .page-footer__social {
-    min-height: 62px;
+    min-height: 61px;
   }
 
   .page-footer__copyright {
@@ -51,16 +51,22 @@
   .page-footer__bottom {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    min-height: 150px;
+    min-height: 85px;
+    padding-top: 65px;
   }
 
   .page-footer__logo {
     margin-right: 18px;
+    display: block;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .page-footer__bottom {
+    min-height: 89px;
+    padding-top: 61px;
+  }
+
   .page-footer__img {
     min-height: 400px;
   }

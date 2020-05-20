@@ -47,7 +47,7 @@
   text-transform: uppercase;
 }
 
-.intro__link--main.button {
+.intro__link.button {
   font-size: 14px;
   margin-top: auto;
 }
@@ -66,13 +66,10 @@
   }
 
   .intro__wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     max-width: 558px;
     margin-left: 0;
-    margin-top: 48px;
-    padding-left: 119px;
+    margin-top: 24px;
+    padding-left: 89px;
     min-height: 281px;
 
     &::before {
@@ -83,14 +80,15 @@
   .intro__title {
     font-size: 60px;
     line-height: 60px;
-    margin-bottom: 0;
+    margin-bottom: 40px;
   }
 
   .intro__slogan {
     font-size: 20px;
+    margin-bottom: 45px;
   }
 
-  .intro__link--main.button {
+  .intro__link.button {
     font-size: 20px;
     width: 44%;
     margin-top: 0;
@@ -102,7 +100,7 @@
   .intro {
     padding-top: 0;
     background-image: url("../img/index-can-desktop@1x.png");
-    background-position: 63% 46%;
+    background-position: 65.5% 35.5%;
     background-size: 552px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -113,11 +111,15 @@
   .intro__wrapper {
     margin: 0;
     padding-top: 0;
-    padding-left: 190px;
+    padding-left: 80px;
     min-height: 286px;
   }
 
-  .intro__link--main.button {
+  .intro__slogan {
+    margin-bottom: 50px;
+  }
+
+  .intro__link.button {
     width: 245px;
   }
 
